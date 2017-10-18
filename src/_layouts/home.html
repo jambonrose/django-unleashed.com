@@ -1,26 +1,31 @@
 ---
 layout: default
 ---
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-  
-  {{ content }}
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-
+<div class="one-half column">
+  <a id="cover" href="{{ site.informit_link }}">
+    Django Unleashed
+  </a>
 </div>
+<div id="buybuttons" class="one-half column">
+  <h2>Buy it!</h2>
+  <a class="button button-primary large-button" href="{{ site.informit_link }}">
+    From the Publisher<br />
+    <span>(DRM-Free ebook available!)</span>
+  </a>
+  <a class="button" href="{{ site.amazon_link }}">
+    From Amazon
+  </a>
+  <a class="button" href="{{ site.barnesnoble_link }}">
+    From Barnes and Noble
+  </a>
+  <h5>Or...</h5>
+  <a class="button" href="http://safari.informit.com/9780133812497">
+    Read it on Safari Books
+  </a>
+  <a class="button" href="https://github.com/jambonrose/DjangoUnleashed-1.8/">
+    See Code on Github
+  </a>
+  <a class="button" href="/errata/">
+    See the Errata
+  </a>
+</div><!-- column -->

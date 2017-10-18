@@ -1,20 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-
   {% include head.html %}
-
   <body>
-
-    {% include header.html %}
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
+    <div class="container">
+      <div class="row">
+        <div class="offset-by-one ten columns">
+          <!--[if lt IE 9]>
+            <p class="center browserupgrade">
+              You are using an <strong>outdated</strong> browser.
+              Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+            </p>
+          <![endif]-->
+        </div>
       </div>
-    </main>
-
-    {% include footer.html %}
-
+      <main class="row" aria-label="Content">
+        {{ content }}
+      </main>
+      {% include footer.html %}
+    </div>
   </body>
-
 </html>
