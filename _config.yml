@@ -28,7 +28,6 @@ github_username:  jekyll
 source: src
 destination: build
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
 
