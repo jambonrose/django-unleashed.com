@@ -34,6 +34,8 @@ destination: build
 markdown: kramdown
 # plugins:
 #   - jekyll-feed
+collections:
+- errata
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
