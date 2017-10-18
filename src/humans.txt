@@ -7,8 +7,12 @@
 
 # THANKS
 
-    <name>
+    Jeff Triplett -- Recommended Jekyll for site
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
+    CSS3
+    HTML5
+    Jekyll Static Site Generator
+    SASS
+    Skeleton CSS
