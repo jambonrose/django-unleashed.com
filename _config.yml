@@ -13,16 +13,20 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
+title: Django Unleashed
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+  The website for Django Unleashed, written by Andrew Pinkham and
+  published by Sams, an imprint of Pearson.
+author: Andrew Pinkham
+author_site: 'http://AndrewsForge.com'
+baseurl: '' # the subpath of your site, e.g. /blog
+url: 'https://django-unleashed.com'
+twitter_username: andrewsforge
+github_username:  jambonrose
+
+informit_link: 'http://click.linksynergy.com/link?id=h60Duu8ZWMA&offerid=145238.2146200&type=2&murl=http%3A%2F%2Fwww.informit.com%2Ftitle%2F9780321985071'
+amazon_link: 'http://www.amazon.com/gp/product/0321985079/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0321985079&linkCode=as2&tag=djangou-20&linkId=JSPV6SR6MR5YZ4RD'
+barnesnoble_link: 'http://www.barnesandnoble.com/w/django-unleashed-andrew-pinkham/1120492919?ean=9780321985071'
 
 # Build settings
 source: src
