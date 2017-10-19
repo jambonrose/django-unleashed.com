@@ -32,6 +32,19 @@ barnesnoble_link: 'http://www.barnesandnoble.com/w/django-unleashed-andrew-pinkh
 source: src
 destination: build
 markdown: kramdown
+highlighter: rouge
+
+# More › http://kramdown.gettalong.org/quickref.html
+# Options › http://kramdown.gettalong.org/options.html
+kramdown:
+  input: GFM
+  # https://github.com/jekyll/jekyll/pull/4090
+  # Rouge Highlighter in Kramdown › http://kramdown.gettalong.org/syntax_highlighter/rouge.html
+  syntax_highlighter_opts:
+    # Rouge Options › https://github.com/jneen/rouge#full-options
+    span:
+      disable: true
+
 # plugins:
 #   - jekyll-feed
 collections:
