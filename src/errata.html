@@ -30,7 +30,7 @@ permalink: /errata/
             <li>
               {% assign default_slug = errata.title | slugify %}
               <a href="#{{ errata.slug | default: default_slug }}">
-                {{ errata.title | markdownify | replace_first: '<p>' | replace_first: '</p>' }}
+                Page {{ errata.page }}: {{ errata.title | markdownify | replace_first: '<p>' | replace_first: '</p>' }}
               </a>
             </li>
           {% endfor %}
@@ -51,7 +51,7 @@ permalink: /errata/
         {% assign default_slug = errata.title | slugify %}
         <section>
           <h3 id="{{ errata.slug | default: default_slug }}">
-            {{ errata.title | markdownify | replace_first: '<p>' | replace_first: '</p>' }}
+            Page {{ errata.page }}: {{ errata.title | markdownify | replace_first: '<p>' | replace_first: '</p>' }}
           </h3>
           {{ errata }}
         </section>
