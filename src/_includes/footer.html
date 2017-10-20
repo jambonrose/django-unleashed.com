@@ -1,3 +1,26 @@
+<hr />
 <footer>
-  <p>© 2016 <a href="{{ site.author_site }}">{{ site.author | escape }}</a></p>
+  <ul>
+    <li>© 2015-{{ 'now' | date: "%Y" }}</li>
+    {% if site.author %}
+      <li>
+        <a href="{{ site.author_site }}">
+          {{ site.author | escape }}
+        </a>
+      </li>
+    {% endif %}
+    {% if site.github_username %}
+      <li>
+        {% include icon-github.html username=site.github_username %}
+      </li>
+    {% endif %}
+    {% if site.twitter_username %}
+      <li>
+        {% include icon-twitter.html username=site.twitter_username %}
+      </li>
+    {% endif %}
+  </ul>
+  <ul>
+    <li>Hosted by <a href="https://jambonsw.com">JamBon Software</a></li>
+  </ul>
 </footer>
