@@ -45,8 +45,9 @@ kramdown:
     span:
       disable: true
 
-# plugins:
-#   - jekyll-feed
+plugins:
+- jekyll-titles-from-headings
+
 collections:
 - errata
 
