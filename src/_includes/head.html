@@ -14,7 +14,18 @@
     <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
   <![endif]-->
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
+  {% if page.url == '/errata/' %}
+    {% capture include_to_scssify %}
+      {% include errata.scss %}
+    {% endcapture %}
+  {% else %}
+    {% capture include_to_scssify %}
+      {% include home.scss %}
+    {% endcapture %}
+  {% endif %}
+  <style type="text/css">
+    {{ include_to_scssify | scssify }}
+  </style>
 
   {% include favicon-head.html %}
 
