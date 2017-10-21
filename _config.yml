@@ -33,6 +33,8 @@ source: src
 destination: build
 markdown: kramdown
 highlighter: rouge
+sass:
+  style: compressed
 
 # More › http://kramdown.gettalong.org/quickref.html
 # Options › http://kramdown.gettalong.org/options.html
