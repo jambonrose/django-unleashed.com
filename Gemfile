@@ -16,6 +16,7 @@ gem "jekyll", "~> 3.6.0"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
+  gem 'jekyll-minifier'
   gem 'jekyll-titles-from-headings'
 end
 
