@@ -1,0 +1,7 @@
+---
+layout: error
+---
+# Method Not Allowed
+{::options auto_ids="false" /}
+
+Sorry, but the HTTP method your tried to use to access this page is not supported.

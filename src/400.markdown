@@ -1,0 +1,7 @@
+---
+layout: error
+---
+# Bad Request
+{::options auto_ids="false" /}
+
+Sorry, but we couldn't understand what your computer asked us for.

@@ -1,0 +1,7 @@
+---
+layout: error
+---
+# Internal Server Error
+{::options auto_ids="false" /}
+
+Sorry, but something has gone horribly, horribly wrong. Please try again later.

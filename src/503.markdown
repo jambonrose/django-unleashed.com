@@ -1,0 +1,7 @@
+---
+layout: error
+---
+# Service Unavailable
+{::options auto_ids="false" /}
+
+Sorry, but the server is currently unreachable. It's probably on a trip to the beach.

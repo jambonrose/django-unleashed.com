@@ -1,0 +1,7 @@
+---
+layout: error
+---
+# Access Forbidden
+{::options auto_ids="false" /}
+
+Sorry, but you're not allowed to see this page.

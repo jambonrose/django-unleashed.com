@@ -1,0 +1,7 @@
+---
+layout: error
+---
+# Range Not Satisfiable
+{::options auto_ids="false" /}
+
+Sorry, but the part of the file you requested is invalid or unavailable.
