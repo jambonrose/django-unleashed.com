@@ -8,7 +8,7 @@ module Jekyll
     class HighlightBlock < Liquid::Block
       def add_code_tag(code)
         lang = @lang.to_s.gsub("+", "-").freeze
-        "<pre><code class='language-#{lang}' data-lang='#{lang}'>#{code.chomp}</code></pre>"
+        "<pre><code class='highlight language-#{lang}' data-lang='#{lang}'>#{code.chomp}</code></pre>"
       end
     end
   end
