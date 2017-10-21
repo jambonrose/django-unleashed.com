@@ -2,20 +2,16 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
   {% include head.html %}
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="offset-by-one ten columns">
-          <!--[if lt IE 9]>
-            <p class="center browserupgrade">
-              You are using an <strong>outdated</strong> browser.
-              Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-            </p>
-          <![endif]-->
-        </div>
+    <!--[if lt IE 9]>
+      <div class="browserupgrade">
+        <p class="center browserupgrade">
+          You are using an <strong>outdated</strong> browser.
+          Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+        </p>
       </div>
-      <main class="row" aria-label="Content">
-        {{ content }}
-      </main>
+    <![endif]-->
+    <div class="container">
+      {{ content }}
       {% include footer.html %}
     </div>
   </body>

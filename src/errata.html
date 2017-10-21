@@ -4,60 +4,62 @@ title: Django Unleashed Errata
 permalink: /errata/
 ---
 {% assign chapter_number_array = site.errata | map: 'chapter' | uniq | sort %}
-<div class="offset-by-one ten columns">
-  <h1>Django Unleashed Errata</h1>
-  <p>
-    To report errata, please email
-    <strong>errata (at) informit (dot) com</strong> with:
-  </p>
-  <ol>
-    <li>the name of the book,</li>
-    <li>the chapter (and section/example if applicable),</li>
-    <li>the page number where the error is found.</li>
-  </ol>
-  <hr>
-  <h2>Table of Contents</h2>
-  <ul>
+<main class="row" aria-label="Content">
+  <div class="offset-by-one ten columns">
+    <h1>Django Unleashed Errata</h1>
+    <p>
+      To report errata, please email
+      <strong>errata (at) informit (dot) com</strong> with:
+    </p>
+    <ol>
+      <li>the name of the book,</li>
+      <li>the chapter (and section/example if applicable),</li>
+      <li>the page number where the error is found.</li>
+    </ol>
+    <hr>
+    <h2>Table of Contents</h2>
+    <ul>
+      {% for chapter_number in chapter_number_array %}
+        {% assign chapter_errata = site.errata | where:"chapter",chapter_number | sort: 'page' %}
+        <li>
+          {% if chapter_number < 31 %}
+            <a href="#chapter{{ chapter_number }}">Chapter {{ chapter_number }}</a>
+          {% else %}
+            <a href="#index">Index</a>
+          {% endif %}
+          <ul>
+            {% for errata in  chapter_errata %}
+              <li>
+                {% assign default_slug = errata.title | slugify %}
+                <a href="#{{ errata.slug | default: default_slug }}">
+                  Page {{ errata.page }}: {{ errata.title | markdownify | replace_first: '<p>' | replace_first: '</p>' }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+    </ul>
+    <hr>
     {% for chapter_number in chapter_number_array %}
       {% assign chapter_errata = site.errata | where:"chapter",chapter_number | sort: 'page' %}
-      <li>
+      <section>
         {% if chapter_number < 31 %}
-          <a href="#chapter{{ chapter_number }}">Chapter {{ chapter_number }}</a>
+          <h2 id="chapter{{ chapter_number }}">Chapter {{ chapter_number }}</h2>
         {% else %}
-          <a href="#index">Index</a>
+          <h2 id="index">Index</h2>
         {% endif %}
-        <ul>
-          {% for errata in  chapter_errata %}
-            <li>
-              {% assign default_slug = errata.title | slugify %}
-              <a href="#{{ errata.slug | default: default_slug }}">
-                Page {{ errata.page }}: {{ errata.title | markdownify | replace_first: '<p>' | replace_first: '</p>' }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </li>
+        {% for errata in  chapter_errata %}
+          {% assign default_slug = errata.title | slugify %}
+          <section>
+            <h3 id="{{ errata.slug | default: default_slug }}">
+              Page {{ errata.page }}: {{ errata.title | markdownify | replace_first: '<p>' | replace_first: '</p>' }}
+            </h3>
+            {{ errata }}
+          </section>
+        {% endfor %}
+      </section>
+      {% unless chapter_number == chapter_number_array.last %}<hr>{% endunless %}
     {% endfor %}
-  </ul>
-  <hr>
-  {% for chapter_number in chapter_number_array %}
-    {% assign chapter_errata = site.errata | where:"chapter",chapter_number | sort: 'page' %}
-    <section>
-      {% if chapter_number < 31 %}
-        <h2 id="chapter{{ chapter_number }}">Chapter {{ chapter_number }}</h2>
-      {% else %}
-        <h2 id="index">Index</h2>
-      {% endif %}
-      {% for errata in  chapter_errata %}
-        {% assign default_slug = errata.title | slugify %}
-        <section>
-          <h3 id="{{ errata.slug | default: default_slug }}">
-            Page {{ errata.page }}: {{ errata.title | markdownify | replace_first: '<p>' | replace_first: '</p>' }}
-          </h3>
-          {{ errata }}
-        </section>
-      {% endfor %}
-    </section>
-    {% unless chapter_number == chapter_number_array.last %}<hr>{% endunless %}
-  {% endfor %}
-</div>
+  </div><!-- column -->
+</main><!-- row -->
