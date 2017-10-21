@@ -1,0 +1,38 @@
+.cover.row {
+  height: 50%;
+  @media (min-width: $on-phablet) {
+    height: 75%;
+  }
+}
+
+.cover.column {
+  height: 100%;
+}
+
+#cover {
+  display: block;
+  text-indent: -9999px;
+  background-image: url("/images/cover_quarter.gif");
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size:contain;
+  height: 90%;
+  @media (min-width: $on-palm) {
+    background-image: url("/images/cover_half.gif");
+  }
+  @media (min-width: $on-phablet) {
+    height: 100%;
+    background-image: url("/images/cover_full.gif");
+  }
+}
+
+#buybuttons {
+  @media (min-width: $on-palm) {
+    margin-top: 2.5%;
+  }
+  @media (min-width: $on-phablet) {
+    margin-top: 5%;
+  }
+}
+
+
