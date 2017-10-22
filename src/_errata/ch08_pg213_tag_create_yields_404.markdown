@@ -14,7 +14,7 @@ the site, you may clone the code from the [main repository][main repo],
 checkout commit [fa52634a9e][fa52634a9e], and then follow the original
 instructions.
 
-```console
+{% highlight shell %}
 $ # remember to run Python projects in a virtual env!
 $ # you can skip the cloning step if you already have the code
 $ git clone git@github.com:jambonrose/DjangoUnleashed-1.8.git
@@ -23,7 +23,7 @@ $ git checkout fa52634a9e
 $ # if you've just cloned, you must first migrate
 $ python manage.py migrate
 $ python manage.py runserver
-```
+{% endhighlight %}
 
 If you now browse to `http://127.0.0.1:8000/tag/create/`, you can see the form
 errors as described.
