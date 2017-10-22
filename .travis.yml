@@ -1,0 +1,23 @@
+dist: trusty
+sudo: false
+language: ruby
+rvm:
+- 2.3
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+before_script:
+- bundle exec jekyll build
+script:
+- bundle exec htmlproofer build --only-4xx --check-favicon --check-html
+deploy:
+  on:
+    branch: development
+  skip_cleanup: true
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  region: $AWS_DEFAULT_REGION
+  bucket: $DOMAIN
+  local_dir: build
+  detect_encoding: true
