@@ -37,7 +37,7 @@ pre > code {
 }
 
 $opposite: darken(invert($brand-color), 5%);
-$triad-one: darken(adjust-hue($brand-color, 120deg), 10%);  // green
+$triad-one: darken(adjust-hue($brand-color, 120deg), 20%);  // green
 $triad-two: darken(adjust-hue($brand-color, -120deg), 10%); // blue
 
 .highlight {
