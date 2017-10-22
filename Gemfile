@@ -19,6 +19,7 @@ group :jekyll_plugins do
   gem 'jekyll-minifier'
   gem 'jekyll-titles-from-headings'
   gem 'jekyll-sitemap'
+  gem 'html-proofer'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
