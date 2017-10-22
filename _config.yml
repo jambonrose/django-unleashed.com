@@ -48,6 +48,7 @@ kramdown:
       disable: true
 
 plugins:
+- jekyll-minifier
 - jekyll-titles-from-headings
 
 collections:
