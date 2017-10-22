@@ -50,6 +50,7 @@ kramdown:
 plugins:
 - jekyll-minifier
 - jekyll-titles-from-headings
+- jekyll-sitemap
 
 collections:
 - errata
