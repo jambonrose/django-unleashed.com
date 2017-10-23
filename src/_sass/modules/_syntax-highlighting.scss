@@ -41,7 +41,11 @@ $triad-one: darken(adjust-hue($brand-color, 120deg), 20%);  // green
 $triad-two: darken(adjust-hue($brand-color, -120deg), 10%); // blue
 
 .highlight {
-  .err   { color: $text-color; background-color: $brand-color } // Error
+  .err { // Error
+    background-color: $brand-color;
+    color: $background-color;
+    padding: 3px;
+  } 
 
   .c,    // Comment
   .c1,   // Comment.Single
