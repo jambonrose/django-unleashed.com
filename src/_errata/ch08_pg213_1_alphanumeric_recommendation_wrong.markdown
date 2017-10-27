@@ -21,3 +21,5 @@ forcibly generate an error. I opt to use `%%%`, but you could use any of
 alphanumeric, so you could generate a validation error by passing a
 string with spaces in between (simply including spaces count as an empty
 submission).
+
+Thanks to Jonathan Friedman for catching the error.
