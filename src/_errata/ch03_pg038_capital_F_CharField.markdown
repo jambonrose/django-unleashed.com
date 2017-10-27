@@ -9,3 +9,5 @@ The second paragraph on page 38 refers to Django's `CharField` multiple
 times. In once instance, the field is mistakenly printed as `Charfield`
 - the *F* should be captialized to properly refer to the Python class
 (as Python variables are case-sensitive).
+
+Thanks to Jonathan Friedman for catching this.
