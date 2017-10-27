@@ -10,3 +10,5 @@ feature `<Tag: Video Games>` in the output. You may see the actual code
 in action in the [Jupyter notebook on Github][Ch3 DB Notebook].
 
 [Ch3 DB Notebook]: https://github.com/jambonrose/DjangoUnleashed-1.8/blob/master/Chapter_03_Model_Managers_and_QuerySets.ipynb
+
+Thanks to Jonathan Friedman for pointing this out.
