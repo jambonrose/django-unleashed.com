@@ -11,3 +11,5 @@ read as below.
 > Unlike the templates for creating or updating `Tag` objects, the
   template for deleting `Tag` objects doesn’t need any information from
   the user and therefore doesn’t need to display `TagForm`.
+
+Thanks to Jonathan Friedman for catching this.
